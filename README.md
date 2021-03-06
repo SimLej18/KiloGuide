@@ -5,7 +5,7 @@ A minimal, get-started guide for kilobots, with various tutorials.
 ## Overview
 This repository contains the source code of [KiloGuide](https://simlej18.github.io/KiloGuide/).
 
-KiloGuide is a simple guide about kilobots, small physical robots used in swarm robotics. The guide currently contains 2 sections of 5 tutorials, covering the most important aspects of kilobots. It explains how to perform various tasks such as calibration or code compilation and provides multiple small project to illustrate how coding for kilobots is done.
+KiloGuide is a simple guide about [kilobots](https://www.kilobotics.com), small physical robots used in swarm robotics. The guide currently contains 2 sections of 5 tutorials, covering the most important aspects of kilobots. It explains how to perform various tasks such as calibration or code compilation and provides multiple small project to illustrate how coding for kilobots is done.
 
 A build version of KiloGuide is hosted by GitHub at [https://simlej18.github.io/KiloGuide/](https://simlej18.github.io/KiloGuide/), available to everyone.
 
