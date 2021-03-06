@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Compile your code - KiloGuide</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Compile your code";
+    var mkdocs_page_input_path = "guides/compile-your-code.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> KiloGuide</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Guides</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="guide-index.html">Guides summary</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting started</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="coding-for-kilobots.html">Coding for kilobots</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="compile-your-code.html">Compile your code</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#compiling-your-code-the-easy-way">Compiling your code - the easy way</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#compiling-your-code-the-less-easy-way">Compiling your code - the less-easy way</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#step-1-install-avr-compilator">Step 1 : install AVR compilator</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#for-linux-using-apt">For Linux using apt</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#for-macos-using-homebrew">For MacOS using homebrew</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-2-download-the-template-code">Step 2 : download the template code</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-3-place-your-files-inside-the-template-directory">Step 3 : place your files inside the template directory</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-4-compile-with-one-command">Step 4 : compile with one command</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#we-are-done">We are done !</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="transfer-and-run-your-program.html">Transfer and run your program</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="use-the-debug-feature.html">Use the debug feature</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Tutorials</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../tutorials/tuto-index.html">Tutorials summary</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../tutorials/tuto1.html">Race Around the World</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../tutorials/tuto2.html">Full Metal Kilobot</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../tutorials/tuto3.html">King-o-bot's Games</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../tutorials/tuto4.html">Morphogenetics</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../tutorials/tuto5.html">Rush Hour</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../about.html">About</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">KiloGuide</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Guides &raquo;</li>
+        
+      
+    
+    <li>Compile your code</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="compile-your-code">Compile your code</h1>
+<hr />
+<p>There are many ways to compile code for kilobots. This guide presents
+two of them.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The following methods have mostly been tested on <strong>MacOS Big Sur</strong>.</p>
+<p>If you experience any problem, please consider visiting <a href="https://diode.group.shef.ac.uk/kilobots/index.php/Getting_Started:_How_to_work_with_kilobots#Compile_your_own_control_software">this quick-start wiki</a> or <a href="https://www.kilobotics.com/documentation#advanceduse">this guide from the official website</a> (go to 'advanced use' in the 'documentation' section).</p>
+<p>Both of those websites where used to write this guide.</p>
+</div>
+<hr />
+<h2 id="compiling-your-code-the-easy-way">Compiling your code - the easy way</h2>
+<p>The <a href="https://www.kilobotics.com">kilobotics website</a> provides a simple online editor to write code for kilobots.</p>
+<p>Once logged in with your Dropbox account, you can access the editor, create new programs and save them.</p>
+<p>To compile your program, just click the green <code>compile</code> button. A <code>.hex</code> file with the same name as your <code>.c</code> file should appear in the KiloEdit directory of your dropbox.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Kilobotics' online editor has aged and is not really maintained anymore. Depending on your operating system, browser or dropbox account and configurations, the editor may not work properly. If this is your case, please use the alternative method presented below.</p>
+</div>
+<hr />
+<h2 id="compiling-your-code-the-less-easy-way">Compiling your code - the less-easy way</h2>
+<p>If the kilobotics' online editor doesn't work or doesn't suit your needs, you can still go for the tough method : compiling the code manually. The goal of this tutorial is to get you a simple command-line utility to easily compile your different programs.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The following method may not work with Windows operating system.<br />
+We suggest that Windows users use a virtual machine running Linux.</p>
+</div>
+<h3 id="step-1-install-avr-compilator">Step 1 : install AVR compilator</h3>
+<h4 id="for-linux-using-apt">For Linux using <code>apt</code></h4>
+<p>Run the following command in the terminal :</p>
+<pre><code>sudo apt-get install avr-libc gcc-avr avrdude
+</code></pre>
+<h4 id="for-macos-using-homebrew">For MacOS using <code>homebrew</code></h4>
+<p>Run the following command in the terminal :</p>
+<pre><code>brew tap osx-cross/avr
+brew install avr-gcc
+</code></pre>
+<h3 id="step-2-download-the-template-code">Step 2 : download the template code</h3>
+<p>To get the task simpler, download <a href="https://diode.group.shef.ac.uk/kilobots/images/8/8a/TemplateForCompilingKilobotCode.zip">this file</a>.</p>
+<p>It contains a shell script that will take care of library dependencies and allow us to compile code with just one command.</p>
+<h3 id="step-3-place-your-files-inside-the-template-directory">Step 3 : place your files inside the template directory</h3>
+<p>Place your files inside the 'TemplateForCompiling' directory. They should now be in the same directory as <code>compileCode.sh</code>.</p>
+<h3 id="step-4-compile-with-one-command">Step 4 : compile with one command</h3>
+<p>Open a terminal window and navigate inside the 'TemplateForCompiling' directory with the <code>cd</code> command.</p>
+<p>Type the following command :</p>
+<pre><code>./compileCode.sh your-file
+</code></pre>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Replace 'your-file' by the real name of the file you want to compile.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note how we didn't put the <code>.c</code> extension at the end of the file name.</p>
+</div>
+<h3 id="we-are-done">We are done !</h3>
+<p>The <code>.hex</code> file corresponding to your program should now appear inside the 'TemplateForCompiling/build/' directory.</p>
+<p>If anything went wrong, refer to the error message returned by the <code>compileCode.sh</code> script. If your code contains syntaxical errors, they will be listed there.</p>
+<hr />
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="transfer-and-run-your-program.html" class="btn btn-neutral float-right" title="Transfer and run your program">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="coding-for-kilobots.html" class="btn btn-neutral" title="Coding for kilobots"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="coding-for-kilobots.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="transfer-and-run-your-program.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

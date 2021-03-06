@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Full Metal Kilobot - KiloGuide</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Full Metal Kilobot";
+    var mkdocs_page_input_path = "tutorials/tuto2.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> KiloGuide</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Guides</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../guides/guide-index.html">Guides summary</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../guides/getting-started.html">Getting started</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../guides/coding-for-kilobots.html">Coding for kilobots</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../guides/compile-your-code.html">Compile your code</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../guides/transfer-and-run-your-program.html">Transfer and run your program</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../guides/use-the-debug-feature.html">Use the debug feature</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Tutorials</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="tuto-index.html">Tutorials summary</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="tuto1.html">Race Around the World</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="tuto2.html">Full Metal Kilobot</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#what-you-will-learn">What you will learn</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create-messages">Create messages</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create-random-numbers">Create random numbers</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#instructors-program">Instructor's program</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#instructions">Instructions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#message-handling">Message handling</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#setup-and-loop">Setup and loop</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#put-it-together">Put it together</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#rookies-program">Rookie's program</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#message-handling_1">Message handling</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#sending-messages">Sending messages</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#receiving-messages">Receiving messages</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#the-loop">The loop</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#put-it-together_1">Put it together</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#we-are-done">We are done !</a>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="tuto3.html">King-o-bot's Games</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="tuto4.html">Morphogenetics</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="tuto5.html">Rush Hour</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../about.html">About</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">KiloGuide</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Tutorials &raquo;</li>
+        
+      
+    
+    <li>Full Metal Kilobot</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="full-metal-kilobot">Full Metal Kilobot</h1>
+<p><a href="../resources/sources/fmk.zip"><em>source code of this tutorial</em></a></p>
+<hr />
+<h2 id="summary">Summary</h2>
+<p>Now that we know the basics, let's tackle the real interesting thing about kilobots : make them communicate.</p>
+<p>This tutorial is inspired by the military training scenes in <a href="https://en.wikipedia.org/wiki/Full_Metal_Jacket">Kubrick's "Full Metal Jacket" movie</a>. We will use two kilobots : one will be the instructor, the other will be the rookie.</p>
+<p>Therefore, we are going to write two distinct programs :</p>
+<ul>
+<li>the instructor's program, generating and sending random training instructions</li>
+<li>the rookie's program, executing instructions as fast as possible</li>
+</ul>
+<hr />
+<h2 id="what-you-will-learn">What you will learn</h2>
+<ul>
+<li>How to create a message with the <code>message_t</code> structure</li>
+<li>How to generate random numbers with the <code>rand_hard()</code> function</li>
+<li>How to send messages with <code>kilo_message_tx</code></li>
+<li>How to receive and read messages with <code>kilo_message_rx</code></li>
+</ul>
+<hr />
+<h2 id="create-messages">Create messages</h2>
+<p>Messages for kilobots are contained in the <code>message_t</code> structure, which has 3 fields :</p>
+<ul>
+<li><code>type</code>, from 0 to 127, describing the type of the message. For this tutorial, we will only use the macro <code>NORMAL</code></li>
+<li><code>data</code>, an array of length 9, storing the real content of the message</li>
+<li><code>crc</code>, an hash code, computed with the <code>message_crc()</code> function, used to check that data was not corrupted during transmission.</li>
+</ul>
+<p>We can define a message like this :</p>
+<pre><code class="language-c">message_t message;  // This message will contain the answer to the ultimate question of life, universe and everything.
+message.type = NORMAL;
+message.data[0] = 42;
+message.crc = message_crc(&amp;message);
+</code></pre>
+<hr />
+<h2 id="create-random-numbers">Create random numbers</h2>
+<p>Kilobots have two functions to generate random numbers :</p>
+<ul>
+<li><code>rand_soft()</code> generates a random number from a seed. You can provide a specific seed using the <code>rand_seed()</code> function.</li>
+<li><code>rand_hard()</code> generates a random number from the kilobot's hardware, namely its battery precise voltage.</li>
+</ul>
+<p>As <code>rand_hard()</code> is slower than <code>rand_soft()</code>, it is common to use <code>rand_soft()</code> when we need random numbers multiple times per second. In that situation, we can use <code>rand_hard()</code> inside <code>rand_seed()</code> to initialize the RNG.</p>
+<p>In this tutorial, we will only use the <code>rand_hard()</code> function as we do not need efficiency.</p>
+<hr />
+<h2 id="instructors-program">Instructor's program</h2>
+<p>Let's get into the real code !</p>
+<h3 id="instructions">Instructions</h3>
+<p>The first step is to define a protocol used by the two kilobots to communicate. It seems difficult but it really is fairly simple.</p>
+<p>We have 3 different possible instructions :</p>
+<ul>
+<li>"<strong>Show me your war face!</strong>" ⟶ Light the led</li>
+<li>"<strong>Turn on yourself x times!</strong>" ⟶ Set motors to do x turns on itself</li>
+<li>"<strong>Run x cm and come back!</strong>" ⟶ Set motors to run x cm, turn around and come back</li>
+</ul>
+<p>A simple protocol would be : "Each instruction has an ID, from 1 to 3, stored in the first byte of <code>data</code>. Instructions 2 and 3 have a parameter, stored in the second byte of <code>data</code>."</p>
+<p>So for example, "Turn on yourself 3 times!" would translate to the following message :</p>
+<pre><code class="language-c">message_t message;
+message.type = NORMAL;
+message.data[0] = 2;  // Turn on yourself...
+message.data[1] = 3;  // ...3 times!
+message.crc = message_crc(&amp;message);
+</code></pre>
+<p>We can now write a simple program that will generate a random instruction :</p>
+<pre><code class="language-c">message_t instruction;
+int instructionID;
+int instructionParam;
+
+void makeInstruction() {
+    // Creates an instruction to be given to the rookie
+    instruction.type = NORMAL;
+    instruction.data[0] = instructionID;
+    instruction.data[1] = instructionParam;
+    instruction.crc = message_crc(&amp;instruction);
+}
+
+void generateInstruction() {
+    // Gives an instruction to the rookie
+
+    // Choses the instruction
+    instructionID = (rand_hard() % 3) + 1;  // Instructions have a specific number, from 1 to 3
+
+    // Depending on the instruction, generates a random parameter
+    switch (instructionID) {
+        case 1:
+            // Rookie must show his war face ! (Turn on his led)
+            instructionParam = 0;
+            break;
+
+        case 2:
+            // Rookie must run x centimeters, then come back.
+            instructionParam = 3 + (rand_hard() % 8); // Cm to be runned, from 3 to 10
+            break;
+
+        case 3:
+            // Rookie must turn around on himself x times.
+            instructionParam = 1 + (rand_hard() % 3); // number of turns, from 1 to 3
+            break;
+    }
+    makeInstruction();
+}
+</code></pre>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note how we put <code>instruction</code>, <code>instructionID</code> and <code>instructionParam</code> as global variables. It makes it possible to access them from anywhere in the code, though we must be careful with the way each part of the program manipulates them.</p>
+</div>
+<h3 id="message-handling">Message handling</h3>
+<p>To handle communication, we need to define two functions. One <em>(commonly named <code>message_tx()</code>)</em> will be called when sending a message, the other <em>(commonly named <code>message_rx()</code>)</em> will be called when receiving a message.</p>
+<p>We also have to define a flag, which is a variable with value 0 or 1 describing the "state" of the robot. In our case, the <code>instructionGiven</code> flag tells wether or not an instruction has been given to the rookie. If its value is 0, the instructor should generate and send a new instruction. If it's 1, the instructor waits for the rookie to finish.</p>
+<pre><code class="language-c">int instructionGiven = 0;
+
+message_t* message_tx() {
+    // This function returns the instruction to send to the rookie
+    return &amp;instruction;
+}
+
+void message_rx(message_t *msg, distance_measurement_t *dist) {
+    // This function is called when the rookie has finished executing his order and is ready for a new one.
+    instructionGiven = 0;
+}
+</code></pre>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Notice the two parameters of the message_rx function. They are mandatory to define the function, but of no use for the instructor.</p>
+</div>
+<h3 id="setup-and-loop">Setup and loop</h3>
+<p>The setup function for the instructor is rather minimalistic, it's even empty in fact. The instructor does not care about anything except yelling orders repeatedly.</p>
+<p>In the loop function, we will either generate a new instruction or wait for the rookie. When generating a new instruction, the instructor will indicate the instruction chosen by turning on its LED with a specific color. When waiting, the instructor blinks yellow.</p>
+<pre><code class="language-c">void setup() {
+}
+
+void loop() {
+    if (!instructionGiven) {
+        // Gives an order. Blinks a specific color depending on the given order
+        generateInstruction();
+
+        switch (instructionID) {
+            case 1:
+                set_color(RGB(1,0, 0)); // Blinks red
+                break;
+
+            case 2:
+                set_color(RGB(0, 1, 0)); // Blinks green
+                break;
+
+            case 3:
+                set_color(RGB(0, 0, 1)); // Blinks green to
+                break;
+        }
+        delay(500);
+        set_color(RGB(0,0,0));
+        instructionGiven = 1;  // Changes the flag
+    }
+    else {
+        // Waits for the rookie. Blinks yellow
+        delay(500);
+        set_color(RGB(1,1,0));
+        delay(500);
+        set_color(RGB(0,0,0));
+    }
+}
+</code></pre>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Even if the <code>setup()</code> function is empty, we must define it, as it must be passed to the <code>kilo_start()</code> function.</p>
+</div>
+<h3 id="put-it-together">Put it together</h3>
+<p>The only thing left to do is to define the main function. <code>kilo_message_tx</code> and <code>kilo_message_rx</code> are system variables used to specify which function to call when sending/receiving a message.</p>
+<pre><code class="language-c">int main() {
+    // initialize hardware
+    kilo_init();
+
+    // Registers the function to call when sending a instruction
+    kilo_message_tx = message_tx;
+
+    // Registers the function to call when rookie says he is ready
+    kilo_message_rx = message_rx;
+
+    // start program
+    kilo_start(setup, loop);
+
+    return 0;
+}
+</code></pre>
+<hr />
+<h2 id="rookies-program">Rookie's program</h2>
+<p>Most of the aspects of the rookie's program have already been seen in the instructor's program. In this section, we will only focus on the new things.</p>
+<h3 id="message-handling_1">Message handling</h3>
+<h4 id="sending-messages">Sending messages</h4>
+<p>The rookie must only send a message to say that he is ready, so the message doesn't need to contain any data : the mere fact that he is sending a message already tells the purpose of the message. <em>And as you can see above, the instructor never cares about the content of the message.</em></p>
+<p>The rookie will also use a flag to tell wether he is ready for an instruction or not.</p>
+<p>These facts give the following code :</p>
+<pre><code class="language-c">#include &lt;stddef.h&gt;  // Defines 'NULL' macro
+
+message_t ready;
+int waitingForInstruction = 0;
+
+void setup() {
+    // Waits to be called by the instructor
+    waitingForInstruction = 1;
+
+    // Initialize the message
+    ready.type = NORMAL;
+    ready.crc = message_crc(&amp;ready);
+}
+
+message_t* message_tx() {
+    // Sends a message if the rookie is ready. If not, sends nothing.
+    if (waitingForInstruction) {
+        return &amp;ready;
+    }
+    return NULL;
+}
+</code></pre>
+<h4 id="receiving-messages">Receiving messages</h4>
+<p>As for the instructor's program, the rookie will receive message with the <code>message_rx()</code> function. Here, the <code>msg</code> parameter is useful to retrieve the content of the message :</p>
+<pre><code class="language-c">int instructionID = 0;
+int instructionParam = 0;
+
+void message_rx(message_t *msg, distance_measurement_t *dist) {
+    // This function is called when the rookie receives an instruction
+    instructionID = msg-&gt;data[0];
+    instructionParam = msg-&gt;data[1];
+    waitingForInstruction = 0;
+}
+</code></pre>
+<h3 id="the-loop">The loop</h3>
+<p>In the loop function, the rookie will either execute an instruction, or wait to receive one. When waiting, it blinks yellow.</p>
+<pre><code class="language-c">int straightSpeedCalibrator = 1000; // Delay in milliseconds to go straight on 1cm
+int turningSpeedCalibrator = 5000; // Delay in milliseconds to make 1 turn around
+
+void loop() {
+    if (waitingForInstruction) {
+        // Waits for orders. Blinks yellow
+        delay(500);
+        set_color(RGB(1,1,0));
+        delay(500);
+        set_color(RGB(0,0,0));
+    }
+    else {
+        switch(instructionID) {
+            case 1:
+                // Rookie shows his war face
+                set_color(RGB(0, 1, 1));
+                delay(500);
+                set_color(RGB(0,0,0));
+                break;
+            case 2:
+                // Rookie runs x centimeters, then comes back
+                for (int i = 0 ; i &lt; 2 ; i++) {
+                    spinup_motors();
+                    set_motors(kilo_straight_left, kilo_straight_right);
+                    delay(instructionParam * straightSpeedCalibrator);
+                    set_motors(kilo_turn_left, 0);
+                    delay(turningSpeedCalibrator);
+                    set_motors(0, 0);
+                }
+                break;
+            case 3:
+                // Rookie turns around on himself x times
+                for (int i = 0 ; i &lt; instructionParam ; i++) {
+                    spinup_motors();
+                    set_motors(kilo_turn_left, 0);
+                    delay(turningSpeedCalibrator);
+                    set_motors(0, 0);
+                }
+                break;
+        }
+        waitingForInstruction = 1;
+        delay(2000);  // Waits two seconds before executing the next instruction
+    }
+}
+</code></pre>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Notice the use of <code>straightSpeedCalibrator</code> and <code>turningSpeedCalibrator</code>. These variables are used to indicate the time the kilobot takes to do a specific movement. Set them to the most fitting values depending on your kilobot specificities.</p>
+</div>
+<h3 id="put-it-together_1">Put it together</h3>
+<p>The <code>main()</code> function is nothing new at this point:</p>
+<pre><code class="language-c">int main() {
+    // Initializes hardware
+    kilo_init();
+
+    // Registers the function to call when receiving a instruction
+    kilo_message_rx = message_rx;
+
+    // Registers the function to call when sending a message
+    kilo_message_tx = message_tx;
+
+    // Starts program
+    kilo_start(setup, loop);
+
+    return 0;
+}
+</code></pre>
+<hr />
+<h2 id="we-are-done">We are done !</h2>
+<p>You can now admire two kilobots in a tough military training. You've mastered the art of communication and are ready to get into the <a href="tuto3.html">next tutorial</a>!</p>
+<hr />
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tuto3.html" class="btn btn-neutral float-right" title="King-o-bot's Games">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="tuto1.html" class="btn btn-neutral" title="Race Around the World"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="tuto1.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="tuto3.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

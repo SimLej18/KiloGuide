@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Transfer and run your program - KiloGuide</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Transfer and run your program";
+    var mkdocs_page_input_path = "guides/transfer-and-run-your-program.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> KiloGuide</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Guides</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="guide-index.html">Guides summary</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting started</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="coding-for-kilobots.html">Coding for kilobots</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="compile-your-code.html">Compile your code</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="transfer-and-run-your-program.html">Transfer and run your program</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#transfer-a-program-to-your-kilobots">Transfer a program to your kilobots</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#run-the-program">Run the program</a>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="use-the-debug-feature.html">Use the debug feature</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Tutorials</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../tutorials/tuto-index.html">Tutorials summary</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../tutorials/tuto1.html">Race Around the World</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../tutorials/tuto2.html">Full Metal Kilobot</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../tutorials/tuto3.html">King-o-bot's Games</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../tutorials/tuto4.html">Morphogenetics</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../tutorials/tuto5.html">Rush Hour</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../about.html">About</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">KiloGuide</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Guides &raquo;</li>
+        
+      
+    
+    <li>Transfer and run your program</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="transfer-and-run-your-programs">Transfer and run your programs</h1>
+<hr />
+<h2 id="transfer-a-program-to-your-kilobots">Transfer a program to your kilobots</h2>
+<p>Once you have successfully compiled your program, it's time to transfer it! To do so, we are going to use this part of the KiloGUI interface :</p>
+<p><img alt="Upload interface" src="../resources/images/UploadProgram.png" /></p>
+<p>Use the <code>[select file]</code> button to select the <code>.hex</code> file you will transfer into the kilobots. Here, we selected the <code>body-1-OL.hex</code> file. Be sure that KiloGUI is connected to the kilobots by hitting the <code>Bootload</code> button. The kilobots' LEDs should now be blue. You can then click the <code>Upload</code> button to start the transfer. The kilobots will blink green and blue alternatively during this process. Wait a few seconds. When the program has been transferred, the kilobots will get back to blink green slowly, indicating that they are ready to start the execution !</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If a kilobot only blinks blue and green for a short amount of time before turning off during transfer, a problem has occurred. Ensure your code does not contain syntaxical errors (if so, they should be displayed during compilation). Be sure the voltage of the kilobot is not too low (aka not red). Check that the ground on which the kilobot is placed is reflecting enough for IR communication. If none of these solutions work, try updating the kilobot firmware.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you experience trouble as above, consider trying different programs, kilobots and reflecting surfaces to identify the root of the problem.</p>
+</div>
+<hr />
+<h2 id="run-the-program">Run the program</h2>
+<p>If the program transfer was successful, it's now time to start the execution! For this section, we are going to focus on this part of the KiloGUI interface :</p>
+<p><img alt="Control Interface" src="../resources/images/SendCommands.png" /></p>
+<p>To start the execution, just press the <code>Run</code> button. The <code>Pause</code> button will stop the execution until the <code>Run</code> button is hit again. To make the kilobots go back to the starting point of the program, use the <code>Reset</code> button.</p>
+<p>The other buttons are not really linked to the program execution. <code>Sleep</code> will put the kilobots to sleep, <code>Voltage</code> will display the battery level using the kilobots' LEDs and <code>LedToggle</code> can be used to ensure that the connection between the kilobots and the head controller has been well established.</p>
+<hr />
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="use-the-debug-feature.html" class="btn btn-neutral float-right" title="Use the debug feature">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="compile-your-code.html" class="btn btn-neutral" title="Compile your code"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="compile-your-code.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="use-the-debug-feature.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

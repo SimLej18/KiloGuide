@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>King-o-bot's Games - KiloGuide</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "King-o-bot's Games";
+    var mkdocs_page_input_path = "tutorials/tuto3.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> KiloGuide</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Guides</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../guides/guide-index.html">Guides summary</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../guides/getting-started.html">Getting started</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../guides/coding-for-kilobots.html">Coding for kilobots</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../guides/compile-your-code.html">Compile your code</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../guides/transfer-and-run-your-program.html">Transfer and run your program</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../guides/use-the-debug-feature.html">Use the debug feature</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Tutorials</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="tuto-index.html">Tutorials summary</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="tuto1.html">Race Around the World</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="tuto2.html">Full Metal Kilobot</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="tuto3.html">King-o-bot's Games</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#what-you-will-learn">What you will learn</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#knights-program">Knight's program</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#defining-macros-and-global-variables">Defining macros and global variables</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#the-setup-function">The setup() function</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#communications">Communications</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#the-loop-function">The loop() function</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#put-it-all-together">Put it all together</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#we-are-done">We are done !</a>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="tuto4.html">Morphogenetics</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="tuto5.html">Rush Hour</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../about.html">About</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">KiloGuide</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Tutorials &raquo;</li>
+        
+      
+    
+    <li>King-o-bot's Games</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="king-o-bots-games">King-o-bot's Games</h1>
+<p><a href="../resources/sources/knight.c"><em>source code of this tutorial</em></a></p>
+<hr />
+<h2 id="summary">Summary</h2>
+<p>By now you should have mastered the movement and communication abilities of kilobots. However, there is one last sensing ability you have yet to discover : distance sensing.</p>
+<p>Kilobots can evaluate their distance from another kilobot when they receive a message : that's the purpose of the <code>message_rx()</code> function's second argument.</p>
+<p>In this simple tutorial, we are going to put two kilobots one in front of the other. As medieval knights, they will charge the other. However, the kilobots are really fearful and, when they will reach their personal distance limit, they will freak out and give up.</p>
+<p><img alt="duel" src="../resources/images/duel.jpeg" /></p>
+<hr />
+<h2 id="what-you-will-learn">What you will learn</h2>
+<ul>
+<li>How to evaluate distance with the <code>distance_measurement_t</code> argument and <code>estimate_distance()</code></li>
+<li>More complex state management</li>
+</ul>
+<hr />
+<h2 id="knights-program">Knight's program</h2>
+<h3 id="defining-macros-and-global-variables">Defining macros and global variables</h3>
+<p>To make our program more configurable and readable, we are going to use <em>C macros</em>. The first two macros are used to define boundaries for the kilobot's distance limit. The four following macros define the kilobot's state.</p>
+<pre><code class="language-c">#define MIN_DISTANCE 35
+#define MAX_DISTANCE 70
+
+#define CHARGING 0
+#define FREAKING_OUT 1
+#define WON 2
+#define LOST 3
+</code></pre>
+<p>Our program will also use 3 global variables. One will contain the kilobot's distance limit, the second contains its state and the last one is used for storing messages.</p>
+<pre><code class="language-c">int distanceLimit;
+int state;
+message_t message;
+</code></pre>
+<h3 id="the-setup-function">The <code>setup()</code> function</h3>
+<p>Here we define the kilobot's custom distance limit using <code>rand_hard()</code>. We set the initial <em>state</em> : at the beginning, the two kilobots are <em>charging</em>. When communicating, the kilobot will send its state in <code>data</code>, so that the other kilobot know when its opponent freaks out. Finally, we set the color to an aggressive red and make the kilobot run forward.</p>
+<pre><code class="language-c">void setup() {
+    // Set the distance limit.
+    distanceLimit = (rand_hard() % (MAX_DISTANCE - MIN_DISTANCE)) + MIN_DISTANCE;
+
+    // Set the state
+    state = CHARGING;
+
+    // Set the message
+    message.type = NORMAL;
+    message.data[0] = state;
+    message.crc = message_crc(&amp;message);
+
+    // Set light and movement
+    set_color(RGB(3, 0, 0));
+    spinup_motors();
+    set_motors(kilo_straight_left, kilo_straight_right);
+}
+</code></pre>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We defined <code>MIN_DISTANCE</code> and <code>MAX_DISTANCE</code> to be 35 and 70 millimeters respectively. This means that <code>distanceLimit</code> will always be between those two values.</p>
+</div>
+<h3 id="communications">Communications</h3>
+<p>Now <strong>this</strong> is the big part of this tutorial.</p>
+<p>The <code>message_tx()</code> function is quite classic know :</p>
+<pre><code class="language-c">message_t* message_tx() {
+    return &amp;message;
+}
+</code></pre>
+<p>The <code>message_rx()</code> function however, is where the magic happens. Here, we analyse the state of the opponent and its distance from us. If the opponent is still charging and is closer than our distance limit, we start to freak out and surrender. If the opponent is freaking out on the other hand, we win and stop moving.</p>
+<pre><code class="language-c">void message_rx(message_t *m, distance_measurement_t *d) {
+    if (state == CHARGING &amp;&amp; m-&gt;data[0] == CHARGING) {
+        // The kilobot and his opponent are still charging each other
+        if (estimate_distance(d) &lt; distanceLimit) {
+            // The kilobot freaks out and surrender
+            state = FREAKING_OUT;
+
+            // Change message
+            message.data[0] = state;
+            message.crc = message_crc(&amp;message);
+
+            // Change movement
+            spinup_motors();
+            set_motors(0, kilo_turn_right);
+        }
+    }
+    else if (m-&gt;data[0]) {
+        // The oponnent is freaking out
+        state = WON;
+
+        // Stop charging
+        spinup_motors();
+        set_motors(0, 0);
+    }
+}
+</code></pre>
+<p>Here you can see how measuring distance is easy. We only need to pass the second argument of <code>message_rx()</code> to <code>estimate_distance()</code>. The result is an approximation of the distance between the two kilobots in millimeters. It can be stored as an <code>int</code> and compared with the <code>distanceLimit</code> we have defined earlier.</p>
+<h3 id="the-loop-function">The <code>loop()</code> function</h3>
+<p>The <code>loop()</code> function will take care of the kilobot's shown behavior depending on its state.</p>
+<pre><code class="language-c">void loop() {
+    if (state == CHARGING) {
+        // The kilobot is charging : blink red
+        set_color(RGB(3, 0, 0));
+        delay(100);
+        set_color(RGB(0, 0, 0));
+        delay(100);
+    }
+    else if (state == FREAKING_OUT) {
+        // The kilobot is freaking out : quickly blink white for 2 seconds
+        for (int i = 0 ; i &lt; 2000 ; i += 200) {
+            set_color(RGB(3, 3, 3));
+            delay(100);
+            set_color(RGB(0, 0, 0));
+            delay(100);
+        }
+        // The kilobot is calming down, he lost
+        set_motors(0, 0);
+        state = LOST;
+    }
+    else if (state == WON) {
+        // The kilobot won the fight : blink blue, green and yellow
+        set_color(RGB(0, 0, 3));
+        delay(100);
+        set_color(RGB(0, 3, 0));
+        delay(100);
+        set_color(RGB(3, 3, 0));
+        delay(100);
+    }
+    else {
+        // The kilobot lost the fight : slowly, shamefully blinks white
+        set_color(RGB(1, 1, 1));
+        delay(2000);
+        set_color(RGB(0, 0, 0));
+        delay(2000);
+    }
+}
+</code></pre>
+<h3 id="put-it-all-together">Put it all together</h3>
+<p>Once again, nothing new in the <code>main()</code> function :</p>
+<pre><code class="language-c">int main()
+{
+    kilo_init();
+
+    kilo_message_tx = message_tx;
+    kilo_message_rx = message_rx;
+
+    kilo_start(setup, loop);
+
+    return 0;
+}
+</code></pre>
+<hr />
+<h2 id="we-are-done">We are done !</h2>
+<p>You can now make <em>impressive</em> and <em>quite shocking</em> kilobots duels ! Place them in front of each other, start and watch them charge... until one freaks out.</p>
+<p>You have mastered distance sensing and are now ready to code some complex programs for kilobots. It's now time to implement <em>collective behaviors</em> with a bigger number of kilobots.</p>
+<hr />
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tuto4.html" class="btn btn-neutral float-right" title="Morphogenetics">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="tuto2.html" class="btn btn-neutral" title="Full Metal Kilobot"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="tuto2.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="tuto4.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

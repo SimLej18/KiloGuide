@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Race Around the World - KiloGuide</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Race Around the World";
+    var mkdocs_page_input_path = "tutorials/tuto1.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> KiloGuide</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Guides</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../guides/guide-index.html">Guides summary</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../guides/getting-started.html">Getting started</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../guides/coding-for-kilobots.html">Coding for kilobots</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../guides/compile-your-code.html">Compile your code</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../guides/transfer-and-run-your-program.html">Transfer and run your program</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../guides/use-the-debug-feature.html">Use the debug feature</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Tutorials</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="tuto-index.html">Tutorials summary</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="tuto1.html">Race Around the World</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#what-you-will-learn">What you will learn</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#basics">Basics</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#the-setup-function">The setup() function</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#the-loop-function">The loop() function</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#the-main-function">The main() function</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#we-are-done">We are done !</a>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="tuto2.html">Full Metal Kilobot</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="tuto3.html">King-o-bot's Games</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="tuto4.html">Morphogenetics</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="tuto5.html">Rush Hour</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../about.html">About</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">KiloGuide</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Tutorials &raquo;</li>
+        
+      
+    
+    <li>Race Around the World</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="race-around-the-world">Race around the world</h1>
+<p><a href="../resources/sources/race.c"><em>source code of this tutorial</em></a></p>
+<hr />
+<h2 id="summary">Summary</h2>
+<p>In this tutorial, we are going to discover the basics of kilobot programming. This simple bunch of code will make a single kilobot race along a track in loop.</p>
+<p>The code in this tutorial is written for <a href="../resources/images/RaceTrack.png">this racetrack</a>. The kilobot starts the race with its front leg on the red point. Note that you can adapt it to any race track you want.</p>
+<p><img alt="racetrack" src="../resources/images/RaceTrack.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We suggest you draw the racetrack onto the kilobot table using a whiteboard marker, so as to not make the robot run on a harsh surface.</p>
+</div>
+<hr />
+<h2 id="what-you-will-learn">What you will learn</h2>
+<ul>
+<li>Basic template for a kilobot program</li>
+<li>How to make the kilobot flash color with <code>set_color()</code></li>
+<li>How to make the kilobot move with <code>set_motors()</code></li>
+</ul>
+<hr />
+<h2 id="basics">Basics</h2>
+<p>If you have already read the <a href="../guides/coding-for-kilobots.html">coding for kilobots</a> guide, you already know that a kilobot program is divided in two main parts : the <code>setup()</code> function and the <code>loop()</code> function. The <code>setup()</code> function is only executed once, at the very start of the execution, and the <code>loop()</code> function is executed again and again until the kilobot is told to stop.</p>
+<p>The following sections will illustrate how these two components work to build a simple behavior for the kilobot.</p>
+<hr />
+<h2 id="the-setup-function">The <code>setup()</code> function</h2>
+<p>Before the kilobot starts racing along the track, we are going to make it flash like the flashlight at the beginning of a real race. As this code is only ran once at the start, we are going to place it in the <code>setup()</code> function :</p>
+<pre><code class="language-c">void setup() {
+    // Blinks red, yellow and green before startup
+    set_color(RGB(1,0,0));  // red
+    delay(1000);
+    set_color(RGB(1,1,0));  // yellow
+    delay(1000);
+    set_color(RGB(0,1,0));  // green
+}
+</code></pre>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code>delay()</code> function stops the execution of the program, but it doesn't stop the LED from shining. It is useful to turn the LED on for a certain amount of time.</p>
+</div>
+<hr />
+<h2 id="the-loop-function">The <code>loop()</code> function</h2>
+<p>The sequence of actions that a kilobot must do to race a single loop around the track will be placed here.</p>
+<pre><code class="language-c">void loop() {
+    // Goes straight
+    spinup_motors();
+    set_motors(kilo_straight_left, kilo_straight_right);
+    delay(2000);
+
+    // Turns left
+    spinup_motors();
+    set_motors(kilo_turn_left, kilo_straight_right/2);
+    delay(5000);
+
+    // Goes straight again
+    spinup_motors();
+    set_motors(kilo_straight_left, kilo_straight_right);
+    delay(4000);
+
+    // Turns right
+    spinup_motors();
+    set_motors(kilo_straight_left/2, kilo_turn_right);
+    delay(5000);
+
+    // Goes straight to get back to the race starting point
+    spinup_motors();
+    set_motors(kilo_straight_left, kilo_straight_right);
+    delay(2000);
+}
+</code></pre>
+<p>To make the kilobot move, we use the <code>set_motors()</code> function. Before calling it, we must call the <code>spinup_motors()</code> function to avoid <a href="https://en.wikipedia.org/wiki/Friction#Static_friction">static friction</a> effects.</p>
+<p>The two arguments of the <code>set_motors()</code> function indicate the power of each motor of the kilobot. Those values can go from 0 (off) to 255 (full speed). To take calibration into account, it is recommended to use the predefined values <code>kilo_straight_left</code>, <code>kilo_straight_right</code>, <code>kilo_turn_left</code> and <code>kilo_turn_right</code> rather than some raw numbers.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Just as it did for the LED, the <code>delay()</code> function makes it possible to define the amount of time during which the motors must work. It doesn't stop the movement of the kilobot</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>See how we used <code>kilo_straight_left/2</code> and <code>kilo_straight_right/2</code> when turning. This enables us to manage the angle of turn. The more we divide the value, the tighter the turn becomes. Replacing those expressions by <code>0</code> would give the tightest turns.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Kilobots movement depends on a lot of factors and is impredictable by nature. The values used in the <code>delay()</code> or <code>set_motors()</code> functions might be changed for them to work in your particular environment.</p>
+</div>
+<hr />
+<h2 id="the-main-function">The <code>main()</code> function</h2>
+<p>We are almost done ! At this point, we only have to define the entry-point of our program : the <code>main()</code> function.</p>
+<pre><code class="language-c">int main() {
+    // Initializes hardware
+    kilo_init();
+    // Starts program
+    kilo_start(setup, loop);
+
+    return 0;
+}
+</code></pre>
+<p>The <code>main()</code> function must always call <code>kilo_init()</code>, then <code>kilo_start()</code> in order to start the program.</p>
+<hr />
+<h2 id="we-are-done">We are done !</h2>
+<p>You can now admire your kilobot burn the tarmac ! Well, it might not be that impressive. The kilobots were probably not designed as racing machines. But fair enough, it at least made you learn the basics of programming for kilobots !</p>
+<hr />
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tuto2.html" class="btn btn-neutral float-right" title="Full Metal Kilobot">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="tuto-index.html" class="btn btn-neutral" title="Tutorials summary"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="tuto-index.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="tuto2.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
