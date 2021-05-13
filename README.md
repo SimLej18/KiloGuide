@@ -15,7 +15,7 @@ KiloGuide has been written using the markdown syntax. It uses [mkdocs ](https://
 
 ---
 ## License
-KiloGuide has been written by Simon Lejoly and is part of a project commanded by the [university of Namur](https://www.unamur.be).
+KiloGuide has been written by Simon Lejoly and is part of a project conducted by the [University of Namur](https://www.unamur.be).
 
 Some of the content of this guide, including images, may be subject to copyright.
 
